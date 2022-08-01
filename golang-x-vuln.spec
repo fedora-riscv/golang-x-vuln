@@ -39,6 +39,7 @@ Source0:        %{gosource}
 for cmd in cmd/* ; do
   %gobuild -o %{gobuilddir}/bin/$(basename $cmd) %{goipath}/$cmd
 done
+
 %install
 %gopkginstall
 install -m 0755 -vd                     %{buildroot}%{_bindir}
